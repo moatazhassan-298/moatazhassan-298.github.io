@@ -4,34 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="معتز حسن محمد، محامٍ في القضايا المدنية والأحوال الشخصية وصياغة العقود.">
+  <meta name="theme-color" content="#0a0a0a">
   <title>معتز حسن محمد | محامٍ</title>
 
   <style>
     :root {
-      --navy: #101c2d;
-      --navy-light: #192a40;
-      --gold: #c9a96e;
-      --paper: #f7f6f2;
-      --ink: #172235;
-      --muted: #657084;
-      --white: #fff;
+      --black: #0a0a0a;
+      --surface: #141414;
+      --surface-light: #1b1b1b;
+      --gold: #d2b16f;
+      --gold-light: #ead6a8;
+      --text: #f5f1e8;
+      --muted: #b9b2a5;
+      --border: #ffffff1a;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
-      color: var(--ink);
-      background: var(--paper);
+      color: var(--text);
+      background: var(--black);
       font-family: Tahoma, Arial, sans-serif;
       line-height: 1.8;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    .wrap {
+    .container {
       width: min(1120px, calc(100% - 40px));
       margin-inline: auto;
     }
@@ -39,22 +48,25 @@
     .hero {
       position: relative;
       overflow: hidden;
-      color: var(--white);
       background:
-        radial-gradient(ellipse at 8% 5%, #c9a96e22, transparent 32%),
-        linear-gradient(135deg, var(--navy), #0b1422);
+        radial-gradient(ellipse at 12% 15%, #d2b16f18, transparent 34%),
+        linear-gradient(135deg, #151515, #080808 70%);
+      border-bottom: 1px solid #d2b16f33;
     }
 
     .hero::after {
       content: "";
       position: absolute;
-      width: 420px;
-      height: 420px;
-      left: -180px;
-      bottom: -280px;
-      border: 1px solid #c9a96e33;
+      width: 430px;
+      height: 430px;
+      left: -210px;
+      bottom: -300px;
+      border: 1px solid #d2b16f35;
       border-radius: 50%;
-      box-shadow: 0 0 0 45px #c9a96e0c, 0 0 0 90px #c9a96e08;
+      box-shadow:
+        0 0 0 45px #d2b16f0c,
+        0 0 0 90px #d2b16f08;
+      pointer-events: none;
     }
 
     nav {
@@ -63,8 +75,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-block: 24px;
-      border-bottom: 1px solid #ffffff1c;
+      padding-block: 22px;
+      border-bottom: 1px solid var(--border);
     }
 
     .brand {
@@ -74,39 +86,45 @@
     }
 
     .nav-link {
-      color: #e4e8ed;
+      color: var(--text);
       font-size: 14px;
+    }
+
+    .nav-link:hover,
+    .social-link:hover {
+      color: var(--gold-light);
     }
 
     .hero-content {
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: 1.4fr .8fr;
+      grid-template-columns: 1.25fr .75fr;
       align-items: center;
-      gap: 48px;
-      min-height: 480px;
-      padding-block: 64px 82px;
+      gap: 64px;
+      min-height: 530px;
+      padding-block: 62px 76px;
     }
 
     .eyebrow {
       display: inline-block;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: var(--gold);
       font-size: 14px;
-      letter-spacing: .4px;
+      font-weight: bold;
+      letter-spacing: .3px;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(36px, 6vw, 62px);
+      font-size: clamp(38px, 6vw, 64px);
       line-height: 1.3;
     }
 
-    .hero p {
+    .hero-description {
       max-width: 610px;
-      margin: 18px 0 26px;
-      color: #d5dbe3;
+      margin: 20px 0 28px;
+      color: #d2cdc3;
       font-size: 17px;
     }
 
@@ -120,21 +138,21 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      min-height: 48px;
-      padding: 10px 21px;
+      min-height: 49px;
+      padding: 10px 22px;
       border: 1px solid var(--gold);
-      border-radius: 7px;
+      border-radius: 6px;
       font-weight: bold;
       transition: .2s ease;
     }
 
-    .button.primary {
-      color: var(--navy);
+    .button-primary {
+      color: #111;
       background: var(--gold);
     }
 
-    .button.secondary {
-      color: var(--white);
+    .button-secondary {
+      color: var(--gold-light);
       background: transparent;
     }
 
@@ -143,30 +161,39 @@
       filter: brightness(1.08);
     }
 
-   <div class="portrait-frame">
-  <img src="moataz.jpg.jpeg" alt="المحامي معتز حسن محمد">
-</div>
+    .portrait-frame {
+      width: min(310px, 100%);
+      aspect-ratio: 4 / 5;
+      justify-self: center;
+      overflow: hidden;
+      border: 2px solid var(--gold);
+      border-radius: 160px 160px 12px 12px;
+      background: var(--surface);
+      box-shadow: 0 0 0 10px #d2b16f0d, 0 25px 60px #0009;
     }
 
-    .portrait-placeholder {
-      color: var(--gold);
-      font-size: 64px;
-      font-weight: bold;
+    .portrait-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 24%;
     }
 
-    section { padding-block: 76px; }
+    section {
+      padding-block: 76px;
+      background: var(--black);
+    }
 
     .section-heading {
-      max-width: 650px;
+      max-width: 690px;
       margin-bottom: 30px;
     }
 
-    .section-heading .eyebrow { margin-bottom: 4px; }
-
     h2 {
       margin: 0;
-      color: var(--navy);
-      font-size: clamp(26px, 4vw, 36px);
+      color: var(--gold);
+      font-size: clamp(27px, 4vw, 38px);
       line-height: 1.4;
     }
 
@@ -175,37 +202,41 @@
       color: var(--muted);
     }
 
-    .about {
+    .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1.5fr;
+      grid-template-columns: .8fr 1.2fr;
       gap: 50px;
       align-items: start;
     }
 
-    .about-mark {
-      padding: 28px;
-      border-right: 3px solid var(--gold);
-      background: var(--white);
-      border-radius: 8px;
-      box-shadow: 0 12px 35px #1722350b;
-    }
-
-    .about-mark strong {
-      display: block;
-      color: var(--navy);
-      font-size: 20px;
-    }
-
-    .about-mark span { color: var(--muted); }
-
     .about-copy p {
       margin-top: 0;
-      color: #4e5a6b;
+      color: #d4cec3;
       font-size: 17px;
     }
 
+    .about-card {
+      padding: 25px;
+      border: 1px solid #d2b16f55;
+      border-right: 3px solid var(--gold);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .about-card strong {
+      display: block;
+      color: var(--gold-light);
+      font-size: 20px;
+    }
+
+    .about-card span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
     .practice {
-      background: var(--white);
+      background: #101010;
+      border-block: 1px solid var(--border);
     }
 
     .cards {
@@ -217,16 +248,16 @@
     .card {
       min-height: 190px;
       padding: 26px;
-      border: 1px solid #e8e6df;
-      border-radius: 10px;
-      background: #fff;
+      border: 1px solid #ffffff1b;
+      border-radius: 8px;
+      background: var(--surface);
       transition: .2s ease;
     }
 
     .card:hover {
       transform: translateY(-4px);
-      border-color: #c9a96e99;
-      box-shadow: 0 16px 35px #1722350c;
+      border-color: #d2b16f88;
+      box-shadow: 0 16px 35px #0005;
     }
 
     .card-number {
@@ -237,7 +268,7 @@
 
     .card h3 {
       margin: 12px 0 6px;
-      color: var(--navy);
+      color: var(--gold-light);
       font-size: 20px;
     }
 
@@ -248,18 +279,16 @@
     }
 
     .contact {
-      color: var(--white);
-      background: var(--navy);
+      background:
+        radial-gradient(ellipse at 90% 10%, #d2b16f12, transparent 35%),
+        #0d0d0d;
+      border-top: 1px solid #d2b16f33;
     }
-
-    .contact h2 { color: var(--white); }
-
-    .contact .intro { color: #c3ccd7; }
 
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 36px;
+      gap: 48px;
       align-items: start;
     }
 
@@ -270,18 +299,22 @@
     }
 
     .contact-item {
-      padding: 13px 16px;
-      border: 1px solid #ffffff20;
-      border-radius: 7px;
-      color: #f3f4f6;
+      display: block;
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
       background: #ffffff08;
+      transition: .2s ease;
     }
 
-    .contact-item:hover { border-color: var(--gold); }
+    .contact-item:hover {
+      border-color: var(--gold);
+      background: #d2b16f0d;
+    }
 
     .contact-label {
       display: block;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
       color: var(--gold);
       font-size: 13px;
     }
@@ -293,96 +326,115 @@
       margin-top: 18px;
     }
 
-    .socials a {
+    .social-link {
       padding: 9px 14px;
       border: 1px solid #ffffff35;
       border-radius: 6px;
-      color: var(--white);
+      color: var(--text);
       font-size: 14px;
+      transition: .2s ease;
     }
 
-    .socials a:hover {
+    .social-link:hover {
       border-color: var(--gold);
-      color: var(--gold);
     }
 
     footer {
       padding: 20px;
-      color: #bec6d0;
-      background: #0b1422;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      background: #060606;
       text-align: center;
       font-size: 13px;
     }
 
     @media (max-width: 760px) {
-      .hero-content, .about, .contact-grid {
+      .hero-content,
+      .about-grid,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
       .hero-content {
-        gap: 34px;
-        padding-block: 48px 62px;
+        gap: 36px;
+        padding-block: 46px 60px;
       }
 
       .portrait-frame {
         grid-row: 1;
-        width: 210px;
+        width: 230px;
       }
 
-      .portrait-placeholder { font-size: 48px; }
+      .cards {
+        grid-template-columns: 1fr;
+      }
 
-      .cards { grid-template-columns: 1fr; }
-
-      section { padding-block: 56px; }
+      section {
+        padding-block: 56px;
+      }
     }
 
-    @media (max-width: 420px) {
-      .wrap { width: min(100% - 28px, 1120px); }
-      nav { padding-block: 17px; }
-      .nav-link { font-size: 12px; }
-      .actions { flex-direction: column; }
-      .button { width: 100%; }
+    @media (max-width: 440px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      nav {
+        padding-block: 16px;
+      }
+
+      .nav-link {
+        font-size: 12px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
     }
   </style>
 </head>
 
 <body>
   <header class="hero">
-    <div class="wrap">
+    <div class="container">
       <nav>
         <a class="brand" href="#">معتز حسن محمد</a>
-        <a class="nav-link" href="#contact">التواصل والاستشارات</a>
+        <a class="nav-link" href="#contact">تواصل معي</a>
       </nav>
 
       <div class="hero-content">
         <div>
           <span class="eyebrow">محامٍ</span>
           <h1>معتز حسن محمد</h1>
-          <p>
-            أقدّم خدمات قانونية في القضايا المدنية والأحوال الشخصية وصياغة العقود،
-            مع الحرص على شرح الأمور القانونية بوضوح وتقديم حلول تناسب كل قضية.
+          <p class="hero-description">
+            أعمل في القضايا المدنية والأحوال الشخصية وصياغة العقود.
+            أحرص على تبسيط الأمور القانونية للعميل وتقديم حلول واضحة تناسب كل قضية.
           </p>
+
           <div class="actions">
-            <a class="button primary" href="tel:01094488154">اتصل الآن</a>
-            <a class="button secondary" href="#practice">تعرّف على مجالات العمل</a>
+            <a class="button button-primary" href="tel:01094488154">اتصل الآن</a>
+            <a class="button button-secondary" href="#practice">مجالات العمل</a>
           </div>
         </div>
 
-        <!-- نستبدل الأحرف بصورة شخصية عند تجهيزها -->
-        <div class="portrait-frame" aria-label="مكان الصورة الشخصية">
-          <div class="portrait-placeholder">م ح</div>
+        <div class="portrait-frame">
+          <img src="moataz.jpg.jpeg" alt="المحامي معتز حسن محمد">
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <section>
-      <div class="wrap about">
+    <section id="about">
+      <div class="container about-grid">
         <div class="section-heading">
           <span class="eyebrow">نبذة مهنية</span>
-          <h2>وضوح قانوني، وخطوات مفهومة</h2>
-          <p class="intro">التواصل الواضح يساعد العميل على فهم خياراته القانونية.</p>
+          <h2>وضوح قانوني وخطوات مفهومة</h2>
+          <p class="intro">شرح مبسّط يساعد العميل على فهم الأمور القانونية.</p>
         </div>
 
         <div class="about-copy">
@@ -390,7 +442,7 @@
             محامٍ أعمل في القضايا المدنية وقضايا الأحوال الشخصية وصياغة العقود.
             أحرص على تبسيط الأمور القانونية للعميل وتقديم حلول واضحة تناسب كل قضية.
           </p>
-          <div class="about-mark">
+          <div class="about-card">
             <strong>معتز حسن محمد</strong>
             <span>محامٍ — قضايا مدنية وأحوال شخصية وصياغة عقود</span>
           </div>
@@ -399,11 +451,11 @@
     </section>
 
     <section class="practice" id="practice">
-      <div class="wrap">
+      <div class="container">
         <div class="section-heading">
           <span class="eyebrow">مجالات العمل</span>
           <h2>الخدمات القانونية</h2>
-          <p class="intro">مجالات العمل المذكورة في هذه الصفحة:</p>
+          <p class="intro">مجالات العمل التي أقدّم فيها خدمات قانونية:</p>
         </div>
 
         <div class="cards">
@@ -422,28 +474,31 @@
           <article class="card">
             <span class="card-number">03</span>
             <h3>صياغة العقود</h3>
-            <p>إعداد وصياغة العقود بلغة واضحة تناسب احتياجات الأطراف.</p>
+            <p>صياغة العقود بلغة واضحة تراعي احتياجات الأطراف.</p>
           </article>
         </div>
       </div>
     </section>
 
     <section class="contact" id="contact">
-      <div class="wrap contact-grid">
+      <div class="container contact-grid">
         <div>
           <span class="eyebrow">تواصل معي</span>
           <h2>يسعدني استقبال استفسارك</h2>
-          <p class="intro">اختر الطريقة المناسبة للتواصل أو تابع حساباتي.</p>
+          <p class="intro">اختر رقم الهاتف المناسب للتواصل.</p>
 
           <div class="contact-list">
             <a class="contact-item" href="tel:01094488154">
-              <span class="contact-label">الهاتف الأول</span>01094488154
+              <span class="contact-label">الهاتف الأول</span>
+              01094488154
             </a>
             <a class="contact-item" href="tel:01501883065">
-              <span class="contact-label">الهاتف الثاني</span>01501883065
+              <span class="contact-label">الهاتف الثاني</span>
+              01501883065
             </a>
             <a class="contact-item" href="tel:01064980533">
-              <span class="contact-label">الهاتف الثالث</span>01064980533
+              <span class="contact-label">الهاتف الثالث</span>
+              01064980533
             </a>
           </div>
         </div>
@@ -452,9 +507,9 @@
           <span class="eyebrow">حساباتي</span>
           <h2>تابعني على</h2>
           <div class="socials">
-            <a href="https://www.facebook.com/share/1EGi2E2z1E/" target="_blank" rel="noopener noreferrer">فيسبوك</a>
-            <a href="https://www.linkedin.com/in/moataz-hassan1" target="_blank" rel="noopener noreferrer">لينكدإن</a>
-            <a href="https://www.instagram.com/moatazhassan298?lqvp=cXNzaTh3YXkzZGh2" target="_blank" rel="noopener noreferrer">إنستغرام</a>
+            <a class="social-link" href="https://www.facebook.com/share/1EGi2E2z1E/" target="_blank" rel="noopener noreferrer">فيسبوك</a>
+            <a class="social-link" href="https://www.linkedin.com/in/moataz-hassan1" target="_blank" rel="noopener noreferrer">لينكدإن</a>
+            <a class="social-link" href="https://www.instagram.com/moatazhassan298?lqvp=cXNzaTh3YXkzZGh2" target="_blank" rel="noopener noreferrer">إنستغرام</a>
           </div>
         </div>
       </div>
