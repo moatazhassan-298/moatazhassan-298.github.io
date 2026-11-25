@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="المحامي معتز حسن محمد — قضايا مدنية وأحوال شخصية وصياغة عقود.">
+  <title>معتز حسن محمد | محامٍ</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: #f7f3e9;
+      background: #101b1b;
+      font-family: Arial, sans-serif;
+      line-height: 1.8;
+    }
+
+    main {
+      width: min(100% - 32px, 760px);
+      margin: 48px auto;
+      padding: 40px;
+      background: #172625;
+      border: 1px solid #b99a5b55;
+      border-radius: 22px;
+      box-shadow: 0 20px 60px #0005;
+    }
+
+    .portrait {
+      width: 132px;
+      height: 132px;
+      margin: 0 auto 20px;
+      display: grid;
+      place-items: center;
+      border: 2px solid #c8aa6e;
+      border-radius: 50%;
+      background: #263736;
+      color: #d6bd86;
+      font-size: 42px;
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #ffffff20;
+    }
+
+    .title {
+      color: #d6bd86;
+      margin: 0;
+      font-size: 18px;
+    }
+
+    h1 {
+      margin: 6px 0;
+      font-size: clamp(27px, 6vw, 38px);
+    }
+
+    h2 {
+      margin: 28px 0 8px;
+      color: #d6bd86;
+      font-size: 20px;
+    }
+
+    p {
+      margin: 8px 0;
+      color: #e1e5df;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .services span {
+      padding: 7px 13px;
+      border: 1px solid #b99a5b66;
+      border-radius: 999px;
+      color: #e6d4aa;
+      font-size: 14px;
+    }
+
+    .phones, .socials {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    a {
+      color: #f7f3e9;
+      text-decoration: none;
+    }
+
+    .link {
+      display: block;
+      padding: 11px 15px;
+      border-radius: 10px;
+      background: #223331;
+      transition: background .2s ease;
+    }
+
+    .link:hover {
+      background: #304541;
+    }
+
+    .contact-button {
+      display: block;
+      margin-top: 26px;
+      padding: 13px 18px;
+      border-radius: 10px;
+      background: #b99a5b;
+      color: #14201f;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 28px;
+      color: #aeb9b3;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 520px) {
+      main {
+        margin: 18px auto;
+        padding: 26px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <!-- سنضيف صورتك هنا لاحقًا -->
+      <div class="portrait" aria-label="مكان الصورة الشخصية">م ح</div>
+      <p class="title">محامٍ</p>
+      <h1>معتز حسن محمد</h1>
+      <p>خدمات قانونية واضحة وحلول تناسب كل قضية</p>
+    </header>
+
+    <section>
+      <h2>نبذة عني</h2>
+      <p>
+        محامٍ أعمل في القضايا المدنية وقضايا الأحوال الشخصية وصياغة العقود.
+        أحرص على تبسيط الأمور القانونية للعميل وتقديم حلول واضحة تناسب كل قضية.
+      </p>
+    </section>
+
+    <section>
+      <h2>مجالات العمل</h2>
+      <div class="services">
+        <span>القضايا المدنية</span>
+        <span>الأحوال الشخصية</span>
+        <span>صياغة العقود</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>أرقام التواصل</h2>
+      <div class="phones">
+        <a class="link" href="tel:01094488154">اتصال: 01094488154</a>
+        <a class="link" href="tel:01501883065">اتصال: 01501883065</a>
+        <a class="link" href="tel:01064980533">اتصال: 01064980533</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>تابعني</h2>
+      <div class="socials">
+        <a class="link" href="https://www.facebook.com/share/1EGi2E2z1E/" target="_blank" rel="noopener noreferrer">فيسبوك</a>
+        <a class="link" href="https://www.linkedin.com/in/moataz-hassan1" target="_blank" rel="noopener noreferrer">لينكدإن</a>
+        <a class="link" href="https://www.instagram.com/moatazhassan298?lqvp=cXNzaTh3YXkzZGh2" target="_blank" rel="noopener noreferrer">إنستغرام</a>
+      </div>
+    </section>
+
+    <a class="contact-button" href="tel:01094488154">اتصل بي</a>
+
+    <footer>© معتز حسن محمد</footer>
+  </main>
+</body>
+</html>
