@@ -7,6 +7,9 @@
   <meta name="theme-color" content="#0a0a0a">
   <title> الاستاذ معتز حسن محمد | محامٍ</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --black: #0a0a0a;
@@ -590,6 +593,109 @@
         gap: 30px;
       }
     }
+
+    body {
+      font-family: "Cairo", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+      font-weight: 400;
+    }
+
+    h1, h2, h3, .brand, .button, .nav-link, .eyebrow {
+      font-family: "Cairo", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+    }
+
+    .hero-description,
+    .intro,
+    .about-copy p,
+    .card p,
+    .contact-item {
+      font-weight: 500;
+    }
+
+    .socials {
+      align-items: center;
+      gap: 12px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 46px;
+      padding: 9px 16px;
+      border: 1px solid #ffffff25;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .06);
+      font-family: "Cairo", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+      font-weight: 600;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+
+    .social-link:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+      background: rgba(210, 177, 111, .12);
+    }
+
+    .social-link img {
+      display: block;
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
+    .social-link-pending {
+      border-style: dashed;
+      color: #d3ccbe;
+      cursor: default;
+    }
+
+    @media (max-width: 440px) {
+      .socials {
+        gap: 9px;
+      }
+
+      .social-link {
+        min-height: 43px;
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+    }
+
+    /* Refined professional portrait frame */
+    .portrait-frame {
+      position: relative;
+      width: min(350px, 100%);
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border: 1px solid rgba(234, 214, 168, .88);
+      border-radius: 26px;
+      background: #17130d;
+      outline: 1px solid rgba(210, 177, 111, .42);
+      outline-offset: 7px;
+      box-shadow: 0 18px 55px rgba(0, 0, 0, .58), 0 0 38px rgba(210, 177, 111, .12);
+    }
+
+    .portrait-frame::after {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border: 1px solid rgba(255, 255, 255, .46);
+      border-radius: 17px;
+      pointer-events: none;
+    }
+
+    .portrait-frame img {
+      border-radius: 24px;
+      object-position: center 24%;
+      filter: saturate(.94) contrast(1.03);
+    }
+
+    @media (max-width: 760px) {
+      .portrait-frame {
+        outline-offset: 5px;
+      }
+    }
   </style>
 </head>
 
@@ -702,9 +808,30 @@
           <span class="eyebrow">حساباتي</span>
           <h2>تابعني على</h2>
           <div class="socials">
-            <a class="social-link" href="https://www.facebook.com/share/1EGi2E2z1E/" target="_blank" rel="noopener noreferrer">فيسبوك</a>
-            <a class="social-link" href="https://www.linkedin.com/in/moataz-hassan1" target="_blank" rel="noopener noreferrer">لينكدإن</a>
-            <a class="social-link" href="https://www.instagram.com/moatazhassan298?lqvp=cXNzaTh3YXkzZGh2" target="_blank" rel="noopener noreferrer">إنستغرام</a>
+            <a class="social-link" href="https://www.facebook.com/share/1EGi2E2z1E/" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك">
+              <img src="https://cdn.simpleicons.org/facebook/1877F2" alt="" aria-hidden="true">
+              فيسبوك
+            </a>
+            <a class="social-link" href="https://wa.me/20109488154" target="_blank" rel="noopener noreferrer" aria-label="واتساب">
+              <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="" aria-hidden="true">
+              واتساب
+            </a>
+            <a class="social-link" href="https://www.instagram.com/moatazhassan298?lqvp=cXNzaTh3YXkzZGh2" target="_blank" rel="noopener noreferrer" aria-label="إنستغرام">
+              <img src="https://cdn.simpleicons.org/instagram/E4405F" alt="" aria-hidden="true">
+              إنستغرام
+            </a>
+            <span class="social-link social-link-pending" title="أضف رابط حساب يوتيوب" aria-label="يوتيوب، أضف رابط الحساب">
+              <img src="https://cdn.simpleicons.org/youtube/FF0000" alt="" aria-hidden="true">
+              يوتيوب
+            </span>
+            <span class="social-link social-link-pending" title="أضف رابط حساب تيك توك" aria-label="تيك توك، أضف رابط الحساب">
+              <img src="https://cdn.simpleicons.org/tiktok/FFFFFF" alt="" aria-hidden="true">
+              تيك توك
+            </span>
+            <a class="social-link" href="https://www.linkedin.com/in/moataz-hassan1" target="_blank" rel="noopener noreferrer" aria-label="لينكدإن">
+              <img src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="" aria-hidden="true">
+              لينكدإن
+            </a>
           </div>
         </div>
       </div>
@@ -714,5 +841,7 @@
   <footer>© معتز حسن محمد — جميع الحقوق محفوظة</footer>
 </body>
 </html>
+
+
 
 
